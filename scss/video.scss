@@ -1,0 +1,59 @@
+@import url("https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@500&display=swap");
+
+body {
+    margin: 0;
+    font-family: "Noto Sans JP", sans-serif;
+    line-height: 1.6em;
+    font-size: 18px;
+}
+
+/*section : Hero */
+.hero {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 70vh;
+    position: relative;
+    overflow: hidden;
+    background: linear-gradient(to left, black, transparent);
+
+    .heading {
+        text-align: center;
+        width: 60%;
+        h1 {
+            text-align: center;
+            font-weight: 600;
+            line-height: 1.6em;
+            font-size: 2em;
+            span {
+                display: block;
+                color: crimson;
+            }
+        }
+    }
+    video {
+        position: absolute;
+        top: 0;
+        left: 0;
+        min-width: 100%;
+        min-height: 100%;
+        z-index: -1;
+        width: 100%;
+        height: 100%;
+        -o-object-fit: cover;
+        object-fit: cover;
+        // top: 50%;
+        // left: 50%;
+        // transform: translate(-50%, -50%);
+    }
+}
+
+/*section : Content */
+.content {
+    padding: 80px 0;
+    .inner {
+        display: flex;
+        gap: 70px;
+        width: 1280px;
+    }
+}
