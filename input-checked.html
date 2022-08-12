@@ -21,10 +21,10 @@
         }
         label[for=trigger]{
             /* border: 1px solid red; */
-            width: 30px;
-            height: 20px;
             display: block;
             position:absolute;
+            width: 30px;
+            height: 20px;
             top: 10px;
             left: 10px;
             cursor: pointer;
@@ -33,13 +33,13 @@
         }
         label[for=trigger] span{
             display: block;
-            height: 2px;
-            background-color: #000;
             position: absolute;
-            left: 0;
             width: 100%;
-            transition: 0.3s;
+            height: 2px;
             z-index: 1000;
+            left: 0;
+            transition: 0.3s;
+            background-color: #000;
         }
         label[for=trigger] span:nth-child(1){
             top:0;
@@ -70,7 +70,7 @@
             left: -250px;
             transition: 0.3s;
         }
-
+/* 형제의 위치에 있기떄문에 */
         input[id=trigger]:checked ~ .sidebar {
             left: 0;
         }
