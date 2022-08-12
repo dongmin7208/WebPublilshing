@@ -1,4 +1,3 @@
-/* Google Web Fonts CDN */
 @import url("https://fonts.googleapis.com/css?family=Noto+Sans+KR:300,400,500,700,900&display=swap");
 
 * {
@@ -8,151 +7,69 @@
 body {
     font-family: "Noto Sans KR", sans-serif;
     margin: 0;
-    color: #333;
+    color: #222;
     line-height: 1.5em;
-    font-weight: 300;
     font-size: 15px;
+    background-color: #eee;
+    font-weight: 300;
 }
 a {
     text-decoration: none;
-    color: #333;
+    color: #222;
 }
 
-/* Reset CSS */
-h1,
-h2,
-h3,
-h4,
-h5,
-h6 {
-    font-weight: 500;
-    margin-top: 0;
+/* Three type Header Navigation */
+header {
+    font-weight: normal;
+    background-color: #fff;
+    box-shadow: 5px 0 15px rgba(0, 0, 0, 0.15);
 }
-
-/* Dropdown Navigation */
-.program {
-    display: flex;
-    justify-content: center;
-    padding: 30px 0;
-    /* align-items: center;
-  height: 100vh; */
+nav {
+    /* border: 1px solid red; */
+    width: 1100px;
+    margin: auto;
+    overflow: hidden;
+    /* height: 70px; */
 }
-.program .inner {
-    width: 1150px;
-    /* margin: auto; */
+nav > div {
+    /* border: 1px solid #000; */
+    height: 70px;
+    /* line-height: 70px; */
+    padding-top: 25px;
 }
-.program .inner h1 {
-    border-bottom: 1px solid #ddd;
-    padding-bottom: 30px;
-    margin-bottom: 30px;
+.logo {
+    /* line-height: 90px; */
+    padding-top: 18px;
+    float: left;
+    margin-right: 15px;
 }
-.items {
-    display: flex;
-    gap: 40px;
+.gnb {
+    float: left;
 }
-.item {
-    flex: 1;
-    position: relative;
+.gnb a {
+    margin: 10px;
 }
-.item-list {
-    text-align: center;
-    color: #ffff;
-    height: 150px;
-    padding-top: 20px;
+.lnb {
+    float: right;
+    /* margin-top: -70px; */
+}
+.lnb a {
+    background-color: teal;
+    color: #fff;
+    padding: 3px 10px;
+    border-radius: 30px;
 }
 .item-desc {
+    display: none;
+}
+.item {
     background-color: #fff;
 }
-.item-desc > div {
-    padding: 0 15px;
-}
-
-.item:nth-child(1) .item-list {
-    background-color: #195fab;
-}
-.item:nth-child(2) .item-list {
-    background-color: #5049a9;
-}
-.item:nth-child(3) .item-list {
-    background-color: #8c66c1;
-}
-
-.item-list h4 {
-    font-weight: 300;
-}
-.btns {
-}
-.btn {
-    background-color: #000;
-    color: #fff;
-    padding: 5px;
-    margin: 3px;
-    width: 80px;
-    display: inline-block;
-}
-.btn.download {
-    width: 200px;
-}
 .item-desc {
-    font-size: 14px;
-}
-
-.item:nth-child(1) .item-desc {
-    border: 3px solid #195fab;
-}
-.item:nth-child(2) .item-desc {
-    border: 3px solid #5049a9;
-}
-.item:nth-child(3) .item-desc {
-    border: 3px solid #8c66c1;
-}
-
-.item-desc ul {
-    list-style: none;
-    margin: 0;
-    padding: 5px;
-    margin-bottom: 15px;
-    background-color: #eee;
-}
-.item-desc ul li:before {
-    content: "-";
-    margin-right: 5px;
-}
-
-/* ############# CSS 방식 드롭다운 네비게이션 ############# */
-
-/* 01 - Show Hide Function : Show Hide */
-/* .item-desc {
-  display: none;
+    height: 0;
+    overflow: hidden;
+    padding: 0;
 }
 .item:hover .item-desc {
-  display: block;
-  position: absolute;
-} */
-
-/* 02 - Show Hide Function : slide down */
-/* .item-desc {
-  max-height: 0;
-  overflow: hidden;
-  transition: 0.5s;
-  background-color: #fff;
-  position: absolute;
-}
-.item:hover .item-desc {
-  max-height: 250px;
-} */
-
-/* 03 - Show Hide Function : Opacity */
-.item {
-    position: relative;
-}
-.item-desc {
-    position: absolute;
-    opacity: 0;
-    visibility: hidden;
-    transition: 0.5s;
-}
-.item:hover .item-desc {
-    opacity: 1;
-    visibility: visible;
+    height: 150px;
 }
