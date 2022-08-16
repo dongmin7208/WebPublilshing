@@ -1,0 +1,72 @@
+/* Google Web Fonts CDN */
+@import url("https://fonts.googleapis.com/css?family=Noto+Sans+KR:300,400,500,700,900&display=swap");
+/* Google Web Font */
+@import url("https://fonts.googleapis.com/css?family=Raleway&display=swap");
+
+/* Google Web Font */
+@import url("https://fonts.googleapis.com/css?family=Montserrat:300,400,500&display=swap");
+
+/* Fontawesome 4.7 */
+@import url("https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css");
+
+/* XEION CDN */
+@import url("http://cdn.jsdelivr.net/npm/xeicon@2.3.3/xeicon.min.css");
+
+body {
+    font-family: "Montserrat", sans-serif;
+    font-size: 18px;
+    line-height: 1.6em;
+    color: #333;
+    background-image: linear-gradient(180deg, #2af598 0%, #009efd 100%);
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+a {
+    text-decoration: none;
+    color: #fff;
+}
+
+.member {
+    width: 900px;
+    background-color: #fff;
+    border-collapse: collapse;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.15);
+    overflow: hidden;
+    border-radius: 10px;
+    th,
+    td {
+        padding: 12px;
+        text-align: center;
+        // border: 1px solid #000;
+    }
+    tr {
+        border-bottom: 1px solid #eee;
+        th {
+            background-color: #009efd;
+            color: #fff;
+        }
+    }
+    tr:hover {
+        background-color: #eee;
+    }
+
+    tr td:last-child {
+        color: red;
+    }
+}
+.member tr:last-child {
+    border: none;
+}
+.member tr th:first-child {
+    border-radius: 5px 0 0 0;
+}
+
+.member tr th:last-child {
+    border-radius: 0 5px 0 0;
+}
+.member tr td:last-child {
+    color: red;
+}
