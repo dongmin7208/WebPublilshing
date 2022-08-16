@@ -1,0 +1,81 @@
+/* Google Web Fonts CDN */
+@import url("https://fonts.googleapis.com/css?family=Noto+Sans+KR:300,400,500,700,900&display=swap");
+/* Google Web Font */
+@import url("https://fonts.googleapis.com/css?family=Raleway&display=swap");
+
+/* Google Web Font */
+@import url("https://fonts.googleapis.com/css?family=Montserrat:300,400,500&display=swap");
+
+/* Fontawesome 4.7 */
+@import url("https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css");
+
+/* XEION CDN */
+@import url("http://cdn.jsdelivr.net/npm/xeicon@2.3.3/xeicon.min.css");
+
+body {
+    font-family: "Montserrat", sans-serif;
+    background-color: #000;
+    margin: 0;
+    height: 100vh;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    // width: 400px;
+}
+
+a {
+    text-decoration: none;
+    color: #fff;
+    // margin: 5px;
+    // width: 300px;
+}
+
+div {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    border: 1px solid #fff;
+    // font-size: 14px;
+    a {
+        color: #fff;
+        margin: 5px;
+        // font-size: 10px;
+        position: relative;
+    }
+    a:before {
+        content: attr(data-text);
+        position: absolute;
+        background: #777;
+        width: 90px;
+        height: 15px;
+        top: -20px;
+        left: 50%;
+        transform: translateX(-50%);
+        text-align: center;
+        line-height: 15px;
+        border-radius: 2px;
+        // font-size: 14px;
+        // padding: 10px;
+    }
+    a:after {
+        content: "";
+        background-color: #777;
+        width: 4px;
+        height: 4px;
+        position: absolute;
+        top: -7px;
+        left: 50%;
+        transform: translateX(-50%) rotate(45deg);
+    }
+}
+.sns a:before,
+.sns a:after {
+    display: none;
+}
+.sns a:hover:before,
+.sns a:hover:after {
+    display: block;
+}
