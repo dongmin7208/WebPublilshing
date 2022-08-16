@@ -1,0 +1,63 @@
+/* Google Web Fonts CDN */
+@import url("https://fonts.googleapis.com/css?family=Noto+Sans+KR:300,400,500,700,900&display=swap");
+
+/* XEION CDN */
+@import url("http://cdn.jsdelivr.net/npm/xeicon@2.3.3/xeicon.min.css");
+
+body {
+    font-family: "Montserrat", sans-serif;
+    background-color: #000;
+    color: #fff;
+    height: 100vh;
+    margin: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+@mixin common {
+    content: attr(data-text);
+    -webkit-text-stroke: 1px transparent;
+    color: royalblue;
+    top: 0;
+    left: 0;
+    position: absolute;
+    transition: 0.3s;
+    opacity: 0;
+}
+@mixin color($color) {
+    color: $color;
+}
+@mixin hover($x, $y) {
+    opacity: 1;
+    transform: translate($x, $y);
+}
+.btn {
+    font: {
+        size: 3em;
+        weight: 500;
+    }
+    color: transparent;
+    text-decoration: none;
+    -webkit-text-stroke: 1px #fff;
+    position: relative;
+    transition: 0.3s;
+    font-weight: 500;
+
+    &::before {
+        // content: attr(data-text);
+        // color: royalblue;
+        // -webkit-text-stroke: 1px transparent;
+        @include common;
+        @include color(royalblue);
+    }
+    &::after {
+        @include common;
+        @include color(crimson);
+    }
+    &:hover::before {
+        @include hover(10px, -10px);
+    }
+    &:hover::after {
+        @include hover(20px, -20px);
+    }
+}
