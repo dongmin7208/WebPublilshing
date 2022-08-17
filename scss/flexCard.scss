@@ -1,0 +1,136 @@
+/* Google Web Fonts CDN */
+@import url("https://fonts.googleapis.com/css?family=Noto+Sans+KR:300,400,500,700,900&display=swap");
+/* Google Web Font */
+@import url("https://fonts.googleapis.com/css?family=Raleway&display=swap");
+
+/* Google Web Font */
+@import url("https://fonts.googleapis.com/css?family=Montserrat:300,400,500&display=swap");
+
+/* Fontawesome 4.7 */
+@import url("https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css");
+
+/* XEION CDN */
+@import url("http://cdn.jsdelivr.net/npm/xeicon@2.3.3/xeicon.min.css");
+
+@font-face {
+    font-family: "GmarketSansLight";
+    src: url("https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_2001@1.1/GmarketSansLight.woff")
+        format("woff");
+    font-weight: normal;
+    font-style: normal;
+}
+body {
+    margin: 0;
+    font-size: 15px;
+    font-family: "Lato", sans-serif;
+    color: #222;
+    line-height: 1.5em;
+    font-weight: 300;
+}
+a {
+    text-decoration: none;
+    color: #222;
+}
+* {
+    box-sizing: border-box;
+}
+section {
+    height: 100vh;
+    position: relative;
+    .inner {
+        width: 1100px;
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        .heading {
+            text-align: center;
+            font-size: 40px;
+            font-weight: 400;
+            position: relative;
+            padding-bottom: 35px;
+            margin-bottom: 80px;
+        }
+        .heading::after {
+            content: "";
+            position: absolute;
+            height: 3px;
+            width: 100px;
+            background-color: crimson;
+            bottom: 0;
+            left: 50%;
+            transform: translateX(-50%);
+        }
+        .items {
+            text-align: center;
+            .item {
+                width: 350px;
+                display: inline-block;
+                margin: 5px;
+                background-color: #f4f4f4;
+                padding: 20px;
+                box-sizing: border-box;
+                text-align: left;
+                vertical-align: top;
+                border-radius: 5px;
+                box-shadow: 0 10px 10px rgba(0, 0, 0, 0.15);
+                .photo {
+                    overflow: hidden;
+                    border-radius: 5px;
+                    height: 230px;
+                    img {
+                        width: 100%;
+                        border-radius: 5px;
+                        transition: 0.7s;
+                    }
+                }
+                .detail {
+                    h2 {
+                        font-weight: normal;
+                    }
+                    p {
+                        font-size: 18px;
+                        line-height: 1.5em;
+                    }
+                    .user-info {
+                        overflow: hidden;
+                        .user {
+                            img {
+                                margin-right: 5px;
+                                width: 40px;
+                                border-radius: 50%;
+                                vertical-align: middle;
+                                margin-right: 5px;
+                            }
+                        }
+                        .comment {
+                            padding-top: 8px;
+                            text-align: right;
+                            .fa .fa-commenting {
+                            }
+                            .fa .fa-heart-o {
+                            }
+                        }
+                    }
+                    .user-info span {
+                        width: 49%;
+                        display: inline-block;
+                    }
+                }
+                .btn-explore {
+                    background-color: dodgerblue;
+                    color: #fff;
+                    display: block;
+                    text-align: center;
+                    text-transform: uppercase;
+                    padding: 5px;
+                    margin-top: 10px;
+                    border-radius: 5px;
+                }
+            }
+            .item:hover .photo img {
+                transform: scale(1.1);
+            }
+        }
+    }
+}
