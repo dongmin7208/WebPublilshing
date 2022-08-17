@@ -1,0 +1,133 @@
+/* Google Web Fonts CDN */
+@import url("https://fonts.googleapis.com/css?family=Noto+Sans+KR:300,400,500,700,900&display=swap");
+/* Google Web Font */
+@import url("https://fonts.googleapis.com/css?family=Raleway&display=swap");
+
+/* Google Web Font */
+@import url("https://fonts.googleapis.com/css?family=Montserrat:300,400,500&display=swap");
+
+/* Fontawesome 4.7 */
+@import url("https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css");
+
+/* XEION CDN */
+@import url("http://cdn.jsdelivr.net/npm/xeicon@2.3.3/xeicon.min.css");
+
+body {
+    font-family: "Montserrat", sans-serif;
+    font-size: 18px;
+    line-height: 1.6em;
+    color: #333;
+    background-image: linear-gradient(180deg, #2af598 0%, #009efd 100%);
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.content {
+    width: 1110px;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    text-align: center;
+    h1 {
+        font-size: 3em;
+        letter-spacing: -1px;
+        margin-bottom: 50px;
+    }
+    .items {
+        .item {
+            display: inline-block;
+            border: 1px solid red;
+            width: 340px;
+            margin: 10px;
+            border-radius: 10px;
+            box-shadow: 0 0 30px rgba(0, 0, 0, 0.15);
+            color: #fff;
+            padding: 40px;
+            box-sizing: border-box;
+            position: relative;
+            overflow: hidden;
+            transition: 0.35s;
+            &:hover {
+                transform: scale(1.05);
+            }
+            &::before {
+                content: "";
+                position: absolute;
+                background-color: rgba(255, 255, 255, 0.25);
+                width: 100%;
+                height: 44%;
+                left: 0;
+                bottom: 0;
+                transform: rotate(13deg) scale(1.5);
+                /* z-index: -1; */
+            }
+            &:nth-child(1) {
+                background: linear-gradient(-45deg, #f223da, #6eabf4);
+            }
+            &:nth-child(2) {
+                background: linear-gradient(-45deg, #fee478, #f938cf);
+            }
+            &:nth-child(3) {
+                background: linear-gradient(-45deg, #4a9beb, #9954fb);
+            }
+            .fa {
+                font-size: 60px;
+                width: 100px;
+                height: 100px;
+                line-height: 100px;
+                border-radius: 50%;
+                box-shadow: 0 10px 10px rgba(0, 0, 0, 0.15);
+            }
+            h3 {
+                font-size: 27px;
+            }
+            h2 {
+                font-size: 40px;
+                display: flex;
+                justify-content: center;
+            }
+            ul {
+                list-style: none;
+                padding: 0;
+                position: relative;
+                li {
+                    font-size: 16px;
+                    margin-left: 5px;
+                    .fa {
+                        font-size: 50px;
+                    }
+                    p {
+                        margin-left: 10px;
+                    }
+                }
+            }
+            .btn-order {
+                background-color: #fff;
+                display: inline-block;
+                width: 130px;
+                padding: 7px;
+                border-radius: 30px;
+                transition: 0.35s;
+                margin-top: 20px;
+                position: relative;
+                &:hover {
+                    background-color: #000;
+                    color: #fff;
+                }
+            }
+        }
+    }
+}
+
+.item:nth-child(1) > .fa {
+    background: linear-gradient(45deg, #f223da, #6eabf4);
+}
+.item:nth-child(2) > .fa {
+    background: linear-gradient(45deg, #fee478, #f938cf);
+}
+.item:nth-child(3) > .fa {
+    background: linear-gradient(45deg, #4a9beb, #9954fb);
+}
