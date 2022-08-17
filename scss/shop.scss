@@ -1,0 +1,152 @@
+/* Google Web Fonts CDN */
+@import url("https://fonts.googleapis.com/css?family=Noto+Sans+KR:300,400,500,700,900&display=swap");
+/* Google Web Font */
+@import url("https://fonts.googleapis.com/css?family=Raleway&display=swap");
+
+/* Google Web Font */
+@import url("https://fonts.googleapis.com/css?family=Montserrat:300,400,500&display=swap");
+
+/* Fontawesome 4.7 */
+@import url("https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css");
+
+/* XEION CDN */
+@import url("http://cdn.jsdelivr.net/npm/xeicon@2.3.3/xeicon.min.css");
+
+@font-face {
+    font-family: "GmarketSansLight";
+    src: url("https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_2001@1.1/GmarketSansLight.woff")
+        format("woff");
+    font-weight: normal;
+    font-style: normal;
+}
+body {
+    font-family: "Noto Sans KR", sans-serif;
+    font-size: 15px;
+    font-weight: 300;
+    line-height: 1.5em;
+    margin: 0;
+}
+* {
+    box-sizing: border-box;
+}
+section {
+    h1 {
+        font-family: "GmarketSansLight";
+        font-size: 66px;
+        text-align: center;
+        font-weight: normal;
+        b {
+        }
+        span {
+            color: deeppink;
+        }
+    }
+    .items-inner {
+        width: 1350px;
+        margin: auto;
+        border: 1px solid #000;
+        padding: 20px 30px;
+        h2 {
+            margin-left: 10px;
+        }
+        .items {
+            display: flex;
+            justify-content: space-between;
+            gap: 20px;
+            counter-reset: item;
+            .item {
+                position: relative;
+                display: inline-block;
+                flex: 1;
+                // counter-increment: item;
+                &:hover::before {
+                    background-color: crimson;
+                }
+                &::before {
+                    counter-increment: item;
+                    content: counter(item);
+                    // content: "1";
+                    position: absolute;
+                    width: 45px;
+                    height: 45px;
+                    background-color: gray;
+                    z-index: 10;
+                    border-radius: 0 0 5px 0;
+                    font-size: 18px;
+                    text-align: center;
+                    line-height: 45px;
+                }
+                // &:nth-child(1)::before {
+                //     content: "1";
+                // }
+                // &:nth-child(2)::before {
+                //     content: "1";
+                // }
+                // &:nth-child(3)::before {
+                //     content: "1";
+                // }
+                // &:nth-child(4)::before {
+                //     content: "1";
+                // }
+                // &:nth-child(5)::before {
+                //     content: "1";
+                // }
+                .photo {
+                    position: relative;
+                    transition: 0.5s;
+                    height: 400px;
+                    &:hover a img:first-child {
+                        opacity: 0;
+                    }
+                    a {
+                        img {
+                            width: 100%;
+                            position: absolute;
+                            &:first-child {
+                                z-index: 1;
+                            }
+                        }
+                    }
+                }
+                .detail {
+                    position: relative;
+                    margin-left: 10px;
+                    span {
+                        display: block;
+                    }
+                    .price {
+                        b {
+                            color: crimson;
+                            margin-right: 10px;
+                            small {
+                            }
+                        }
+                    }
+                    .name {
+                    }
+                    .count {
+                    }
+                    .like {
+                        // border: 1px solid red;
+                        position: absolute;
+                        width: 20px;
+                        height: 20px;
+                        right: 5px;
+                        top: 5px;
+                        cursor: pointer;
+                        &::before {
+                            content: "\f08a";
+                            font-size: 18px;
+                            color: #999;
+                            font-family: fontawesome;
+                        }
+                    }
+                    .like.active::before {
+                        content: "\f004";
+                        color: crimson;
+                    }
+                }
+            }
+        }
+    }
+}

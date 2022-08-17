@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Document</title>
+        <link href="/assets/css/shop.css" rel="stylesheet" />
+        <link
+            rel="stylesheet"
+            href="//cdn.jsdelivr.net/npm/xeicon@2.3.3/xeicon.min.css"
+        />
+        <!-- jQuery CDN -->
+        <script src="https://code.jquery.com/jquery-3.5.1.min.js"></script>
+
+        <!-- jQuery UI CDN -->
+        <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.min.js"></script>
+    </head>
+    <body>
+        <section>
+            <h1 class="heading">Apple <b>ALL!</b> store <span>SHOP</span></h1>
+            <div class="items-inner">
+                <h2>おすすめ商品</h2>
+                <div class="items">
+                    <div class="item">
+                        <div class="photo">
+                            <a href="#none">
+                                <img src="images/item-01.jpg" />
+                                <img src="images/item-01-hover.jpg" />
+                            </a>
+                        </div>
+                        <div class="detail">
+                            <span class="price">
+                                <b>18<small>%</small></b
+                                >53,900円</span
+                            >
+                            <span class="name">airpods Max </span>
+                            <span class="count">purchases 30</span>
+                            <span class="like"></span>
+                        </div>
+                    </div>
+                    <div class="item">
+                        <div class="photo">
+                            <a href="#none">
+                                <img src="images/item-02.jpg" />
+                                <img src="images/item-02-hover.jpg" />
+                            </a>
+                        </div>
+                        <div class="detail">
+                            <span class="price"
+                                ><b>26<small>%</small></b
+                                >2300円</span
+                            >
+                            <span class="name">Apple Earphones</span>
+                            <span class="count">purchases 20</span>
+                            <span class="like"></span>
+                        </div>
+                    </div>
+                    <div class="item">
+                        <div class="photo">
+                            <a href="#none">
+                                <img src="images/item-03.jpg" />
+                                <img src="images/item-03-hover.jpg" />
+                            </a>
+                        </div>
+                        <div class="detail">
+                            <span class="price"
+                                ><b>26<small>%</small></b
+                                >135,000円</span
+                            >
+                            <span class="name">MacBook Pro M2 256G </span>
+                            <span class="count">purchases 80</span>
+                            <span class="like"></span>
+                        </div>
+                    </div>
+                    <div class="item">
+                        <div class="photo">
+                            <a href="#none">
+                                <img src="images/item-04.jpg" />
+                                <img src="images/item-04-hover.jpg" />
+                            </a>
+                        </div>
+                        <div class="detail">
+                            <span class="price"
+                                ><b>20<small>%</small></b
+                                >43000円</span
+                            >
+                            <span class="name">Apple Watch 8</span>
+                            <span class="count">purchases 70</span>
+                            <span class="like"></span>
+                        </div>
+                    </div>
+                    <div class="item">
+                        <div class="photo">
+                            <a href="#none">
+                                <img src="images/item-05.jpg" />
+                                <img src="images/item-05-hover.jpg" />
+                            </a>
+                        </div>
+                        <div class="detail">
+                            <span class="price"
+                                ><b>20<small>%</small></b
+                                >83,000円</span
+                            >
+                            <span class="name">Apple VR </span>
+                            <span class="count">purchases 50</span>
+                            <span class="like"></span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <script>
+            $(".like").click(function () {
+                $(this).toggleClass("active");
+            });
+        </script>
+    </body>
+</html>
