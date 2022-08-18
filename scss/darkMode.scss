@@ -1,0 +1,262 @@
+/* Google Web Fonts CDN */
+@import url("https://fonts.googleapis.com/css?family=Noto+Sans+KR:300,400,500,700,900&display=swap");
+/* Google Web Font */
+@import url("https://fonts.googleapis.com/css?family=Raleway&display=swap");
+
+/* Google Web Font */
+@import url("https://fonts.googleapis.com/css?family=Montserrat:300,400,500&display=swap");
+
+/* Fontawesome 4.7 */
+@import url("https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css");
+
+/* XEION CDN */
+@import url("http://cdn.jsdelivr.net/npm/xeicon@2.3.3/xeicon.min.css");
+
+@font-face {
+}
+body {
+    font-family: "Roboto", sans-serif;
+    background: url(/images/svg-background.svg);
+    color: #333;
+    font-size: 15px;
+    line-height: 1.6em;
+    margin: 0;
+}
+a {
+    text-decoration: none;
+    color: #222;
+}
+* {
+    box-sizing: border-box;
+}
+
+.frame {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    // width: 100%;
+    gap: 30px;
+    // border: 1px solid #000;
+    text-align: center;
+    .profile {
+        position: relative;
+        width: 320px;
+        padding: 30px;
+        margin-top: 200px;
+        box-sizing: border-box;
+        background: #fff;
+        border-radius: 7px;
+        box-shadow: 0 0 20px rgba(0, 0, 0, 0.15);
+        text-align: center;
+        display: inline-block;
+        transition: 0.5s;
+        // margin: 20px;
+        .face {
+            width: 120px;
+            height: 120px;
+            // margin: auto;
+            display: inline-block;
+            position: relative;
+
+            img {
+                width: 120px;
+                height: 120px;
+                border-radius: 50%;
+                box-shadow: 0 0 25px rgba(0, 0, 0, 0.5);
+            }
+            i {
+                position: absolute;
+                right: 5px;
+                bottom: 5px;
+                font-size: 20px;
+                background-color: deepskyblue;
+                border-radius: 50%;
+                color: #fff;
+            }
+        }
+        h1 {
+            // margin-top: 60px;
+            font-size: 26px;
+            font-weight: normal;
+            line-height: 1.2em;
+            margin-bottom: 0;
+            span {
+                display: block;
+                font-size: 14px;
+                color: #bbb;
+                margin-top: 10px;
+            }
+        }
+        p {
+            span {
+                display: block;
+                color: royalblue;
+            }
+        }
+        .view-portfolio {
+            display: inline-block;
+            background-color: #00cec9;
+            color: #fff;
+            padding: 5px 20px;
+            border-radius: 30px;
+            text-transform: capitalize;
+            width: 200px;
+            margin-bottom: 20px;
+        }
+        .sns {
+            border-top: 1px solid #eee;
+            padding-top: 30px;
+            margin-top: 20px;
+            div {
+                display: inline-block;
+                width: 30%;
+                i {
+                    color: #fff;
+                    width: 70px;
+                    height: 70px;
+                    font-size: 2.5em;
+                    line-height: 70px;
+                    border-radius: 50%;
+                    box-shadow: 0 0 15px rgba(0, 0, 0, 0.3);
+                }
+                span {
+                    font-size: 13px;
+                    color: #bbb;
+                    big {
+                        display: block;
+                        color: #333;
+                        font-size: 22px;
+                        font-weight: 500;
+                        margin-top: 10px;
+                    }
+                }
+            }
+            div:nth-child(1) i {
+                background-image: linear-gradient(
+                    to top,
+                    #ff0844 0%,
+                    #ffb199 100%
+                );
+            }
+            div:nth-child(2) i {
+                background-image: linear-gradient(
+                    to top,
+                    #00c6fb 0%,
+                    #005bea 100%
+                );
+            }
+            div:nth-child(3) i {
+                background-image: linear-gradient(
+                    -60deg,
+                    #16a085 0%,
+                    #f4d03f 100%
+                );
+            }
+        }
+        .btn-mode,
+        .like-more {
+            font-size: 22px;
+            cursor: pointer;
+        }
+        .btn-mode {
+            width: 20px;
+            height: 20px;
+            position: absolute;
+            top: 20px;
+            left: 20px;
+            &::before {
+                content: "\eb0f";
+                font-family: xeicon;
+            }
+        }
+        .like-more {
+            position: absolute;
+            top: 20px;
+            right: 20px;
+            .btn-like {
+                margin-right: 10px;
+                width: 20px;
+                height: 20px;
+                display: inline-block;
+                cursor: pointer;
+                &::before {
+                    content: "\ea11";
+                    font-family: xeicon;
+                }
+                &.active::before {
+                    content: "\ea10";
+                    color: rgba(217, 31, 31, 0.873);
+                }
+            }
+
+            .btn-more {
+                cursor: pointer;
+                i {
+                }
+            }
+        }
+    }
+}
+
+.profile.dark {
+    background: #323650;
+    .face {
+        img {
+        }
+        i {
+        }
+    }
+    h1 {
+        color: #fff;
+
+        span {
+        }
+    }
+    p {
+        color: #fff;
+
+        span {
+        }
+    }
+    .view-portfolio {
+    }
+    .sns {
+        // color: #fff;
+        border-top: 1px solid #555;
+        div {
+            i {
+            }
+            span {
+                big {
+                    color: #fff;
+                }
+            }
+        }
+        div:nth-child(1) i {
+        }
+        div:nth-child(2) i {
+        }
+        div:nth-child(3) i {
+        }
+    }
+    .btn-mode,
+    .like-more {
+        color: #fff;
+    }
+    .btn-mode {
+        &::before {
+            content: "\eba3";
+        }
+    }
+    .like-more {
+        .btn-like {
+            &::before {
+            }
+        }
+
+        .btn-more {
+            i {
+            }
+        }
+    }
+}
