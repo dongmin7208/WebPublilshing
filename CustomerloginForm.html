@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Document</title>
+        <link href="/assets/css/CustomerloginForm.css" rel="stylesheet" />
+        <link
+            rel="stylesheet"
+            href="//cdn.jsdelivr.net/npm/xeicon@2.3.3/xeicon.min.css"
+        />
+        <!-- jQuery CDN -->
+        <script src="https://code.jquery.com/jquery-3.5.1.min.js"></script>
+
+        <!-- jQuery UI CDN -->
+        <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.min.js"></script>
+    </head>
+    <body>
+        <form class="login">
+            <h1>Login Accounts</h1>
+            <span class="field">User Email</span>
+            <input type="email" placeholder="Type your email" />
+            <span class="field">user password</span>
+            <input type="password" placeholder="Type your password" />
+            <div class="save-info">
+                <label for="save-email">
+                    <input type="checkbox" id="save-email" /><em></em>Save your
+                    email</label
+                >
+                <a class="forgot" href="#none">forgot password?</a>
+            </div>
+            <div class="event-info">
+                Would you like to receive event emails?
+                <div class="custom-checkbox">
+                    <label for="yes">
+                        <input type="radio" name="event" id="yes" /><em></em
+                        >Yes</label
+                    >
+                    <label for="no">
+                        <input type="radio" name="event" id="no" /><em></em
+                        >No</label
+                    >
+                </div>
+            </div>
+            <input type="button" value="login" />
+            <div class="sns-info">
+                Or Login using
+                <div class="sns">
+                    <a href="#none"><i class="xi-linkedin"></i></a>
+                    <a href="#none"><i class="xi-facebook"></i></a>
+                    <a href="#none"><i class="xi-instagram"></i></a>
+                    <a href="#none"><i class="xi-line"></i></a>
+                </div>
+            </div>
+            <div class="signup-info">
+                Have not Account yet?
+                <a href="#none">Sign Up</a>
+            </div>
+        </form>
+    </body>
+</html>
