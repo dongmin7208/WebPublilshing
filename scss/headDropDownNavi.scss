@@ -1,0 +1,374 @@
+/* Google Web Fonts CDN */
+@import url("https://fonts.googleapis.com/css?family=Noto+Sans+KR:300,400,500,700,900&display=swap");
+// font-family: 'Noto Sans KR', sans-serif;
+
+// /* Google Web Font */
+// @import url("https://fonts.googleapis.com/css?family=Raleway&display=swap");
+// // font-family: 'Raleway', sans-serif;
+
+/* Google Web Font */
+@import url("https://fonts.googleapis.com/css?family=Montserrat:300,400,500&display=swap");
+// font-family: 'Montserrat', sans-serif;
+
+/* Google Web Font */
+// @import url("https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;600;700&display=swap");
+// font-family: 'Playfair Display', serif;
+
+// /* Google Web Font */
+// @import url("https://fonts.googleapis.com/css2?family=Roboto:wght@100;300;400;500;700;900&display=swap");
+// // font-family: 'Roboto', sans-serif;
+
+// /* Google Web Font */
+// @import url("https://fonts.googleapis.com/css2?family=Source+Sans+Pro:wght@300;400;600;700;900&display=swap");
+// // font-family: 'Source Sans Pro', sans-serif;
+
+/* Noonnu Korean Fonts */
+// @font-face {
+//     font-family: "GmarketSansLight";
+//     src: url("https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_2001@1.1/GmarketSansLight.woff")
+//         format("woff");
+//     font-weight: normal;
+//     font-style: normal;
+// }
+
+/* Fontawesome 4.7 */
+// @import url("https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css");
+
+/* XEION CDN */
+@import url("http://cdn.jsdelivr.net/npm/xeicon@2.3.3/xeicon.min.css");
+
+@mixin r() {
+    @media screen and(max-width: 768px) {
+        @content;
+    }
+}
+body {
+    margin: 0;
+    font-size: 15px;
+    color: #333;
+    line-height: 1.5em;
+}
+// Reset CSS
+a {
+    text-decoration: none;
+    color: #333;
+}
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    // font-weight: 500;
+    // margin-top: 0;
+}
+ul li {
+}
+input,
+button {
+    outline: none;
+}
+input,
+select {
+    cursor: pointer;
+}
+// html
+* {
+    box-sizing: border-box;
+    font-family: "Montserrat", sans-serif;
+    outline: none;
+    // border: 1px solid red;
+}
+/* ######### Header ##############*/
+
+/* Banner */
+header {
+    .banner-outer {
+        position: relative;
+        background: linear-gradient(to right, #00202b 50%, #fff 50%);
+        .banner {
+            width: 1450px;
+            margin: auto;
+            // height: 40px;
+            .close-banner {
+                position: absolute;
+                right: 10px;
+                font-size: 26px;
+                color: #aaa;
+                cursor: pointer;
+                top: 5px;
+                i {
+                }
+            }
+            img {
+                // width: 100%;
+                display: block;
+            }
+        }
+    }
+    /* LNB */
+    .lnb-outer {
+        background-color: #e2edf8;
+        .lnb {
+            width: 1450px;
+            margin: auto;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 15px 0;
+            .logo {
+                a {
+                    img {
+                    }
+                }
+            }
+            .lnb-navi {
+                a {
+                }
+                a:hover {
+                    color: dodgerblue;
+                }
+                a::after {
+                    content: "|";
+                    font-size: 12px;
+                    color: #bbb;
+                    margin-right: 5px;
+                    padding-left: 5px;
+                }
+                a:last-child:after {
+                    display: none;
+                }
+            }
+        }
+    }
+    /* GNB */
+    .gnb-outer {
+        background-color: #272c38;
+        nav {
+            width: 1450px;
+            // border: 1px solid #fff;
+            margin: auto;
+            position: relative;
+            .gnb {
+                margin: 0;
+                padding: 0;
+                list-style: none;
+                // height: 50px;
+                display: flex;
+                li:not(.gnb li:last-child) {
+                    height: 50px;
+                    border-right: 1px solid #fff;
+                    flex: 1;
+                    position: relative;
+                    text-align: center;
+                    & > a {
+                        color: #fff;
+                        display: block;
+                        height: 100%;
+                        padding-top: 14px;
+                        .badge {
+                            font-style: normal;
+                            color: #fff;
+                            background-color: crimson;
+                            font-size: 12px;
+                            padding: 0 5px;
+                            border-radius: 10px;
+                        }
+                    }
+                    .dropdown {
+                        position: absolute;
+                        width: 100%;
+                        /* Dropdown Function #01*/
+                        // display: none;
+                        /* Dropdown Function #02*/
+                        opacity: 0;
+                        transition: 0.5s;
+                        pointer-events: none;
+                        // visibility: hidden;
+
+                        a {
+                            // color: #fff;
+                            background-color: #fff;
+                            display: block;
+                            padding: 8px;
+                            text-align: center;
+                            border-bottom: 1px solid #ddd;
+                        }
+                        a:last-child {
+                            border: none;
+                        }
+                        a:hover {
+                            background-color: #eee;
+                        }
+                    }
+                    /* Dropdown Function #01*/
+                    &:hover .dropdown {
+                        display: block;
+                    }
+                    /* Dropdown Function #02*/
+                    &:hover .dropdown {
+                        opacity: 1;
+                        // visibility: visible;
+                        pointer-events: all;
+                    }
+                }
+                li:nth-child(1) {
+                    background-color: red;
+                    a {
+                        // color: #fff;
+                    }
+                }
+                li:nth-child(2) {
+                    a {
+                    }
+                    .dropdown {
+                    }
+                }
+                li:nth-child(3) {
+                    a {
+                    }
+                }
+
+                li:nth-child(4) {
+                    a {
+                    }
+                    .dropdown {
+                        a {
+                        }
+                    }
+                }
+                li:nth-child(5) {
+                    a {
+                        em {
+                        }
+                    }
+                    .dropdown {
+                        a {
+                        }
+                        a {
+                        }
+                        a {
+                        }
+                    }
+                }
+                li:nth-child(6) {
+                    a {
+                    }
+                    .dropdown {
+                        a {
+                        }
+                        a {
+                        }
+                        a {
+                        }
+                        a {
+                        }
+                        a {
+                        }
+                        a {
+                        }
+                    }
+                }
+                li:nth-child(7) {
+                    width: 50px;
+                    background-color: #12359d;
+                    position: relative;
+                    transition: 0.35s;
+                    .trigger {
+                        width: 25px;
+                        height: 14px;
+                        position: absolute;
+                        top: 50%;
+                        left: 50%;
+                        transform: translate(-50%, -50%);
+                        cursor: pointer;
+                        span {
+                            position: absolute;
+                            width: 100%;
+                            height: 1px;
+                            background-color: #fff;
+                            transition: 0.35s;
+                        }
+                        span:nth-child(1) {
+                            top: 0;
+                        }
+                        span:nth-child(2) {
+                            top: 50%;
+                        }
+                        span:nth-child(3) {
+                            top: 100%;
+                        }
+                        &.active span {
+                            background-color: #000;
+                        }
+                        &.active span:nth-child(1) {
+                            top: 50%;
+                            transform: rotate(45deg);
+                        }
+                        &.active span:nth-child(2) {
+                            opacity: 0;
+                        }
+                        &.active span:nth-child(3) {
+                            top: 50%;
+                            transform: rotate(-45deg);
+                        }
+                    }
+                    &.active {
+                        background-color: #fff;
+                        // color: #fff;
+                    }
+                }
+            }
+            .sitemap-outer {
+                background-color: #fff;
+                position: absolute;
+                // 부모요소다음으로 딱 붙는게 탑100%
+                top: 100%;
+                width: 100%;
+                padding: 30px 15px;
+                display: none;
+                .sitemap {
+                    display: flex;
+                    div {
+                        flex: 1;
+                        font-size: 14px;
+                        line-height: 2em;
+                        b {
+                        }
+                        a {
+                            // li같은 디자인
+                            // display: list-item;
+                            // list-style: none;
+                            // padding: 0;
+                            display: block;
+                            &::before {
+                                content: "- ";
+                            }
+                            &:hover {
+                                text-decoration: underline;
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+
+/* ######### Section ##############*/
+section img {
+    width: 100%;
+}
+section {
+    .inner {
+        width: 1450px;
+        margin: 50px auto;
+        h1 {
+            font-size: 3em;
+        }
+        p {
+            font-size: 18px;
+            line-height: 1.7em;
+        }
+    }
+}
