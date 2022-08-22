@@ -1,0 +1,228 @@
+/* Google Web Fonts CDN */
+@import url("https://fonts.googleapis.com/css?family=Noto+Sans+KR:300,400,500,700,900&display=swap");
+// font-family: 'Noto Sans KR', sans-serif;
+
+// /* Google Web Font */
+// @import url("https://fonts.googleapis.com/css?family=Raleway&display=swap");
+// // font-family: 'Raleway', sans-serif;
+
+/* Google Web Font */
+@import url("https://fonts.googleapis.com/css?family=Montserrat:300,400,500&display=swap");
+// font-family: 'Montserrat', sans-serif;
+
+/* Google Web Font */
+// @import url("https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;600;700&display=swap");
+// font-family: 'Playfair Display', serif;
+
+// /* Google Web Font */
+// @import url("https://fonts.googleapis.com/css2?family=Roboto:wght@100;300;400;500;700;900&display=swap");
+// // font-family: 'Roboto', sans-serif;
+
+// /* Google Web Font */
+// @import url("https://fonts.googleapis.com/css2?family=Source+Sans+Pro:wght@300;400;600;700;900&display=swap");
+// // font-family: 'Source Sans Pro', sans-serif;
+
+/* Noonnu Korean Fonts */
+// @font-face {
+//     font-family: "GmarketSansLight";
+//     src: url("https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_2001@1.1/GmarketSansLight.woff")
+//         format("woff");
+//     font-weight: normal;
+//     font-style: normal;
+// }
+// Noto Sans Japanese
+@import url("https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@500&display=swap");
+
+/* Fontawesome 4.7 */
+// @import url("https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css");
+// font-family: 'Noto Sans JP', sans-serif;
+
+/* XEION CDN */
+@import url("http://cdn.jsdelivr.net/npm/xeicon@2.3.3/xeicon.min.css");
+
+// mobile layout
+@mixin r() {
+    @media screen and(max-width: 768px) {
+        @content;
+    }
+}
+// mobile layout
+@mixin t() {
+    @media screen and(min-width: 768px) and (max-width: 1023px) {
+        @content;
+    }
+}
+body {
+    margin: 0;
+    font-size: 15px;
+    color: #333;
+    line-height: 1.5em;
+}
+// Reset CSS
+a {
+    text-decoration: none;
+    color: #333;
+}
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    // font-weight: 500;
+    margin-top: 0;
+}
+ul li {
+}
+input,
+button {
+    outline: none;
+}
+input,
+select {
+    cursor: pointer;
+}
+// html
+* {
+    box-sizing: border-box;
+    outline: none;
+    // border: 1px solid red;
+}
+body {
+    font-size: 15px;
+    line-height: 1.6em;
+    background-color: #fff;
+    color: #222;
+    margin: 0;
+    font-family: "Noto Sans JP", sans-serif;
+}
+/* Common CSS */
+
+/* Section portfolio */
+.portfolio {
+    height: 100vh;
+    display: grid;
+    justify-items: center;
+    align-content: center;
+    background: url(/images/grid/background.png);
+    background-position: top right;
+    background-repeat: no-repeat;
+    @include r {
+        align-content: flex-start;
+        height: auto;
+        padding: 30px;
+    }
+
+    .headline-share {
+        text-align: center;
+        h1 {
+            font-size: 56px;
+            font-weight: 500;
+            text-transform: capitalize;
+            position: relative;
+            padding: 50px 0px;
+            @include r {
+                font-size: 32px;
+                margin-bottom: 40px;
+                margin-top: 30px;
+            }
+            @include t {
+                margin-top: 50px;
+                text-align: center;
+                align-items: center;
+                display: flex;
+            }
+            &::before {
+                content: "";
+                position: absolute;
+                height: 5px;
+                width: 130px;
+                background: linear-gradient(to right, #1f8de6, #5ed6fe);
+                bottom: 0;
+                left: 50%;
+                transform: translateX(-50%);
+            }
+            /* .headline-share hr {
+            height: 5px;
+            width: 80px;
+            border: none;
+            background: linear-gradient(to right, #1f8de6, #5ed6fe);
+            } */
+        }
+    }
+    .items {
+        width: 1280px;
+        display: grid;
+        grid-template-columns: repeat(4, 1fr);
+        gap: 30px;
+        @include r {
+            width: 100%;
+            grid-template-columns: repeat(1, 1fr);
+            grid-template-columns: auto;
+            grid-template-columns: 1fr;
+        }
+        @include t {
+            // grid-column: 1 / span 2;
+            grid-column: span 2;
+        }
+        .item {
+            b {
+                font-weight: normal;
+                color: crimson;
+                font-size: 14px;
+            }
+            h2 {
+                font-size: 26px;
+                margin-top: 15px;
+            }
+            .font-noto {
+                font-family: "Noto Sans JP", sans-serif;
+            }
+            .font-noto.portfolio-info span {
+                display: list-item;
+                // list-style: decimal;
+                // list-style: disc;
+                list-style: square;
+                margin-left: 20px;
+            }
+        }
+        .item.thum .photo {
+            border: 1px solid #000;
+            height: 400px;
+            border-radius: 15px;
+            box-shadow: 0 15px 45px -10px black;
+            background-repeat: no-repeat;
+            background-size: cover;
+            background-position: top;
+            transition: 2s;
+        }
+        .item.thum:hover .photo {
+            background-position: bottom;
+        }
+        .item.thum:nth-of-type(1) .photo {
+            background-image: url(/images/grid/web-portfolio-01.jpg);
+        }
+        .item.thum:nth-of-type(2) .photo {
+            background-image: url(/images/grid/web-portfolio-02.jpg);
+        }
+        .item.thum:nth-of-type(3) .photo {
+            background-image: url(/images/grid/web-portfolio-03.jpg);
+        }
+        .item.thum span {
+            display: block;
+            text-align: center;
+            margin-top: 7px;
+            .btn-view {
+                color: #fff;
+                font-size: 10px;
+                padding: 2px 8px;
+            }
+            .btn-view.pc {
+                background-color: crimson;
+            }
+            .btn-view.mobile {
+                background-color: dodgerblue;
+            }
+        }
+    }
+}
