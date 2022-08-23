@@ -1,0 +1,266 @@
+/* Google Web Fonts CDN */
+@import url("https://fonts.googleapis.com/css?family=Noto+Sans+KR:300,400,500,700,900&display=swap");
+// font-family: 'Noto Sans KR', sans-serif;
+
+// /* Google Web Font */
+// @import url("https://fonts.googleapis.com/css?family=Raleway&display=swap");
+// // font-family: 'Raleway', sans-serif;
+
+// /* Google Web Font */
+// @import url("https://fonts.googleapis.com/css?family=Montserrat:300,400,500&display=swap");
+// // font-family: 'Montserrat', sans-serif;
+
+// /* Google Web Font */
+// @import url("https://fonts.googleapis.com/css2?family=Roboto:wght@100;300;400;500;700;900&display=swap");
+// // font-family: 'Roboto', sans-serif;
+
+// /* Google Web Font */
+// @import url("https://fonts.googleapis.com/css2?family=Source+Sans+Pro:wght@300;400;600;700;900&display=swap");
+// // font-family: 'Source Sans Pro', sans-serif;
+
+/* Noonnu Korean Fonts */
+// @font-face {
+//     font-family: "GmarketSansLight";
+//     src: url("https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_2001@1.1/GmarketSansLight.woff")
+//         format("woff");
+//     font-weight: normal;
+//     font-style: normal;
+// }
+
+/* Fontawesome 4.7 */
+@import url("https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css");
+
+/* XEION CDN */
+@import url("http://cdn.jsdelivr.net/npm/xeicon@2.3.3/xeicon.min.css");
+
+@mixin r() {
+    @media screen and(max-width: 768px) {
+        @content;
+    }
+}
+body {
+    font-size: 14px;
+    color: #333;
+    background-color: #f5f6f7;
+    line-height: 1.5em;
+    // margin: 0;
+    font-weight: 300;
+    // background: url(/images/CustomerloginForm/background.png) no-repeat;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 0px auto;
+}
+// Reset CSS
+a {
+    text-decoration: none;
+    color: #333;
+}
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    font-weight: 500;
+    margin-top: 0;
+}
+input,
+button {
+    outline: none;
+}
+input,
+select {
+    cursor: pointer;
+}
+// html
+*::-webkit-input-placeholder {
+    padding-left: 10px;
+    // border: 1px solid red;
+}
+*::-moz-placeholder {
+    padding-left: 10px;
+    // border: 1px solid red;
+}
+*:-ms-input-placeholder {
+    padding-left: 10px;
+    // border: 1px solid red;
+}
+*::-ms-input-placeholder {
+    padding-left: 10px;
+    // border: 1px solid red;
+}
+*::placeholder {
+    padding-left: 10px;
+    // border: 1px solid red;
+}
+.member {
+    @include r {
+        width: 90%;
+    }
+    width: 460px;
+    margin: 0px auto;
+    .logo {
+        @include r {
+            width: 50%;
+        }
+        display: block;
+        margin: 50px auto;
+    }
+    input:not(input[type="radio"]),
+    select {
+        border: 1px solid #dadada;
+        padding: 10px 0;
+        width: 100%;
+        margin-bottom: 5px;
+    }
+    x input:not(input[type="radio"]):focus,
+    select:focus {
+        border: 1px solid #2db400;
+    }
+    .field {
+        margin: 10px 0;
+        b {
+            display: block;
+            font-weight: 600;
+            margin-bottom: 5px;
+        }
+        span {
+        }
+
+        & + .tel-number select,
+        & + .tel-number select + div {
+            width: 100%;
+            margin: 8px 0;
+        }
+    }
+    .tel-number + input[type="submit"] {
+        background-color: #2db400;
+        width: 100%;
+    }
+
+    .birth > div {
+        display: flex;
+        gap: 10px;
+        width: 100%;
+    }
+    .tel-number > div {
+        display: flex;
+        gap: 10px;
+    }
+    .tel-number > div input:nth-child(1) {
+        flex: 2;
+    }
+    .tel-number > div input:nth-child(2) {
+        flex: 1;
+        background-color: #2db400;
+        text-align: center;
+    }
+    .tel-number > div input:nth-child(2)::-webkit-input-placeholder {
+        color: #fff;
+    }
+    .tel-number > div input:nth-child(2)::-moz-placeholder {
+        color: #fff;
+    }
+    .tel-number > div input:nth-child(2):-ms-input-placeholder {
+        color: #fff;
+    }
+    .tel-number > div input:nth-child(2)::-ms-input-placeholder {
+        color: #fff;
+    }
+    .tel-number > div input:nth-child(2)::placeholder {
+        color: #fff;
+    }
+    .field + .gender div {
+        // display: none;
+        border: 1px solid #dadada;
+        background-color: #fff;
+        padding: 15px 5px;
+    }
+    .field + .gender label input[name="gender"] {
+        display: none;
+    }
+    .field.gender label {
+        cursor: pointer;
+    }
+    .field.gender label em {
+        display: inline-block;
+        width: 18px;
+        height: 18px;
+        margin-right: 3px;
+        transform: translateY(3px);
+        // or
+        // vertical-align: middle;
+        // margin-top: -2px;
+        background: url(/images/signup/icon-radio.png) no-repeat;
+        background-position: left;
+    }
+    .field + .gender label input[name="gender"]:checked + em {
+        background-position: right;
+    }
+    .field .placehold-text {
+        // border: 1px solid red;
+        display: block;
+        position: relative;
+    }
+    .field .placehold-text::before {
+        // border: 1px solid red;
+        content: "@gmail.com";
+        // display: block;
+        // text-align: right;
+        right: 10px;
+        top: 10px;
+        position: absolute;
+        pointer-events: none;
+        // 이메일글자 눌렀을때 무시
+    }
+    .field .userpw {
+        background: url(/images/signup/icon-01.png) no-repeat center right 15px;
+        background-size: 20px;
+    }
+    .field .userpw-confirm {
+        background: url(/images/signup/icon-02.png) no-repeat center right 15px;
+        background-size: 20px;
+    }
+    select {
+        -webkit-appearance: none;
+        -moz-appearance: none;
+        appearance: none;
+        background: #fff url(/images/signup/icon-select.png) no-repeat center
+            right 20px;
+    }
+    input[type="number"]::-webkit-outer-spin-button,
+    input[type="number"]::-webkit-inner-spin-button {
+        -webkit-appearance: none;
+    }
+    .member-footer {
+        text-align: center;
+        font-size: 13px;
+        margin-top: 20px;
+        div {
+        }
+        div a {
+            // margin-right: 10px;
+            // border-right: 1px solid #bbb;
+            // padding-right: 10px;
+        }
+        div a::after {
+            // display: none;
+            content: "|";
+            font-size: 10px;
+            color: #bbb;
+            margin-right: 5px;
+            padding-left: 7px;
+        }
+        div a:last-child:after {
+            display: none;
+        }
+        div a:hover {
+            text-decoration: underline;
+            color: #2db400;
+        }
+        div a:nth-of-type(2) {
+            font-weight: 500;
+        }
+    }
+}
