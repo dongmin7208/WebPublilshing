@@ -19,102 +19,88 @@
     </head>
     <body>
         <div class="container">
-            <div class="member">
-                <img src="/images/signup/2.png" alt="logo" class="logo" />
-                <div class="field">
-                    <b>ユーザID</b>
-                    <span class="placehold-text">
-                        <input type="text" placeholder="id" />
-                    </span>
-                </div>
-                <div class="field">
-                    <b>パスワード</b>
-                    <input
-                        class="userpw"
-                        type="password"
-                        placeholder="パスワード"
-                    />
-                </div>
-                <div class="field">
-                    <b>パスワード確認</b>
-                    <input
-                        class="userpw-confirm"
-                        type="password"
-                        placeholder="パスワード確認"
-                    />
-                </div>
-                <div class="field">
-                    <b>氏名</b>
-                    <input type="text" placeholder="お名前" />
-                </div>
-                <div class="field">
-                    <b>氏名（フリガナ）</b>
-                    <input type="text" placeholder="ふりがな" />
-                </div>
-                <div class="field birth">
-                    <b>生年月日</b>
-                    <div>
-                        <input type="number" placeholder="年(4)" />
-                        <select aria-label="state">
-                            <option value="">月</option>
-                            <option value="">1月</option>
-                            <option value="">2月</option>
-                            <option value="">3月</option>
-                            <option value="">4月</option>
-                            <option value="">5月</option>
-                            <option value="">6月</option>
-                            <option value="">7月</option>
-                            <option value="">8月</option>
-                            <option value="">9月</option>
-                            <option value="">10月</option>
-                            <option value="">11月</option>
-                            <option value="">12月</option>
-                        </select>
-                        <input type="number" placeholder="日" />
+            <header>Header</header>
+            <section>Section #01</section>
+            <section>Section #02</section>
+            <section>Section #03</section>
+            <section>Section #04</section>
+            <footer>
+                <div class="footer-inner">
+                    <div class="copyright">
+                        <div class="policy">
+                            <a href="#none">個人情報保護方針 </a><em>|</em>
+                            <a href="#none">プレスルーム</a>
+                        </div>
+                        <div class="info">
+                            <span
+                                >ロゴ利用ガイドライン<em>|</em>Q&A(報道関係者様)<em>|</em>LINE
+                                プライバシーポリシー<em>|</em>LINE Privacy
+                                Center</span
+                            >
+                            <p>
+                                CopyRight (c) parkdongmin Company. ALL Rights
+                                RESERVED.
+                            </p>
+                        </div>
+                    </div>
+                    <div class="family">
+                        <div class="dropdown">
+                            <div class="title">Family Site</div>
+                            <ul class="sub-navi">
+                                <li>
+                                    <a href="https://linecorp.com/ja/">LINE</a>
+                                </li>
+                                <li>
+                                    <a href="https://linecorp.com/ja/"
+                                        >LINE　STORE</a
+                                    >
+                                </li>
+                                <li>
+                                    <a href="https://linecorp.com/ja/"
+                                        >LINE　Creators Market</a
+                                    >
+                                </li>
+                                <li>
+                                    <a href="https://linecorp.com/ja/"
+                                        >LINE　Out</a
+                                    >
+                                </li>
+                                <li>
+                                    <a href="https://linecorp.com/ja/"
+                                        >LINE　プレイ</a
+                                    >
+                                </li>
+                                <li>
+                                    <a href="https://linecorp.com/ja/"
+                                        >LINE　公式アカウント</a
+                                    >
+                                </li>
+                                <li>
+                                    <a href="https://linecorp.com/ja/"
+                                        >LINE　NEWS</a
+                                    >
+                                </li>
+                                <li>
+                                    <a href="https://linecorp.com/ja/"
+                                        >LINE　Camera</a
+                                    >
+                                </li>
+                            </ul>
+                        </div>
                     </div>
                 </div>
-                <div class="field gender">
-                    <b>性別</b>
-                    <div>
-                        <label>
-                            <input type="radio" name="gender" /><em></em>男性
-                        </label>
-                        <label>
-                            <input type="radio" name="gender" /><em></em>女性
-                        </label>
-                        <label>
-                            <input type="radio" name="gender" /><em></em
-                            >選択なし
-                        </label>
-                    </div>
-                </div>
-                <div class="field">
-                    <b>確認メールアドレス (選択)</b>
-                    <input type="email" placeholder="email" />
-                </div>
-                <div class="field tel-number">
-                    <b>携帯電話</b>
-                    <select aria-label="phone">
-                        <option value="">日本 +81</option>
-                    </select>
-
-                    <div>
-                        <input type="tel" placeholder="電話番号" />
-                        <input type="button1" placeholder="電話番号確認" />
-                    </div>
-                    <input type="number" placeholder="コード" />
-                </div>
-                <input type="submit" placeholder="eeee" />
-                <div class="member-footer">
-                    <div>
-                        <a href="#none">利用規約</a>
-                        <a href="#none">個人情報処理方針</a>
-                        <a href="#none">責任の限界と法的告知</a>
-                        <a href="#none">会員情報センター</a>
-                    </div>
-                    <span>© <a href="#none">Line Corp.</a></span>
-                </div>
-            </div>
+            </footer>
         </div>
+        <script>
+            $(".title").click(function () {
+                $(".sub-navi").slideToggle();
+                $(this).toggleClass("active");
+            });
+            $(".sub-navi li").click(function () {
+                const link = $(this).text();
+                $(this).parent().slideUp();
+                $(".title").text(link);
+            });
+        </script>
     </body>
 </html>
