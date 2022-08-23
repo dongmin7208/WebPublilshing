@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Line 会員登録 Form</title>
+        <link href="/images/signup/faviconLine.png" rel="icon" />
+        <link href="/assets/css/search.css" rel="stylesheet" />
+        <link
+            rel="stylesheet"
+            href="//cdn.jsdelivr.net/npm/xeicon@2.3.3/xeicon.min.css"
+        />
+        <!-- jQuery CDN -->
+        <script src="https://code.jquery.com/jquery-3.5.1.min.js"></script>
+
+        <!-- jQuery UI CDN -->
+        <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.min.js"></script>
+    </head>
+    <body>
+        <div class="container">
+            <header>
+                <div class="logo">
+                    <img src="/images/search/logo.png" alt="" />
+                </div>
+                <div class="search">
+                    <span class="clear"><i class="xi-close-thin"></i></span>
+                    <span class="icon"><i class="xi-search"></i></span>
+                    <div class="input-frame">
+                        <input
+                            type="text"
+                            id="searchInput"
+                            placeholder="Type Here"
+                        />
+                    </div>
+                </div>
+            </header>
+            <section>
+                <h1>This is Section #01</h1>
+                <p>
+                    Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                    Reiciendis recusandae magni quae odio dignissimos, velit qui
+                    soluta accusamus beatae excepturi! Nostrum dolores similique
+                    voluptas illum dignissimos vero doloremque. Dicta,
+                    quibusdam!
+                </p>
+            </section>
+            <section>
+                <h1>This is Section #02</h1>
+                <p>
+                    Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                    Reiciendis recusandae magni quae odio dignissimos, velit qui
+                    soluta accusamus beatae excepturi! Nostrum dolores similique
+                    voluptas illum dignissimos vero doloremque. Dicta,
+                    quibusdam!
+                </p>
+            </section>
+        </div>
+
+        <script>
+            var icon = document.querySelector(".icon");
+            var search = document.querySelector(".search");
+            var clear = document.querySelector(".clear");
+            var searchInput = document.getElementById("searchInput");
+            var section = document.getElementsByTagName("section");
+
+            icon.onclick = function () {
+                search.classList.toggle("active");
+            };
+            icon.addEventListener("click", function () {
+                search.classList.toggle("active");
+            });
+            clear.onclick = function () {
+                searchInput.value = "";
+            };
+            // clear.onclick = function () {
+            //     searchInput.value = "";
+            // };
+            // section.onclick = function () {
+            //     search.classList.remove("active");
+            // };
+            // for (var i = 0; section.length; i++) {
+            //     section[i].onclick = function () {
+            //         search.classList.remove("active");
+            //     };
+            // }
+        </script>
+    </body>
+</html>

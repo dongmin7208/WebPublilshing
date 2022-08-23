@@ -1,0 +1,191 @@
+/* Google Web Fonts CDN */
+@import url("https://fonts.googleapis.com/css?family=Noto+Sans+KR:300,400,500,700,900&display=swap");
+// font-family: 'Noto Sans KR', sans-serif;
+
+// /* Google Web Font */
+// @import url("https://fonts.googleapis.com/css?family=Raleway&display=swap");
+// // font-family: 'Raleway', sans-serif;
+
+// /* Google Web Font */
+// @import url("https://fonts.googleapis.com/css?family=Montserrat:300,400,500&display=swap");
+// // font-family: 'Montserrat', sans-serif;
+
+// /* Google Web Font */
+// @import url("https://fonts.googleapis.com/css2?family=Roboto:wght@100;300;400;500;700;900&display=swap");
+// // font-family: 'Roboto', sans-serif;
+
+// /* Google Web Font */
+// @import url("https://fonts.googleapis.com/css2?family=Source+Sans+Pro:wght@300;400;600;700;900&display=swap");
+// // font-family: 'Source Sans Pro', sans-serif;
+
+/* Noonnu Korean Fonts */
+// @font-face {
+//     font-family: "GmarketSansLight";
+//     src: url("https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_2001@1.1/GmarketSansLight.woff")
+//         format("woff");
+//     font-weight: normal;
+//     font-style: normal;
+// }
+@import url("https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@300;400;500;700&display=swap");
+// font-family: 'Noto Sans JP', sans-serif;
+
+/* Fontawesome 4.7 */
+@import url("https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css");
+
+/* XEION CDN */
+@import url("http://cdn.jsdelivr.net/npm/xeicon@2.3.3/xeicon.min.css");
+
+@mixin r() {
+    @media screen and(max-width: 768px) {
+        @content;
+    }
+}
+body {
+    font-size: 14px;
+    color: #333;
+    background-color: #f5f6f7;
+    line-height: 1.5em;
+    margin: 0;
+    font-weight: 300;
+    // background: url(/images/CustomerloginForm/background.png) no-repeat;
+    // display: flex;
+    // justify-content: center;
+    // align-items: center;
+    margin: 0px auto;
+}
+// Reset CSS
+a {
+    text-decoration: none;
+    color: #333;
+}
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    font-weight: 500;
+    margin-top: 0;
+}
+input,
+button {
+    outline: none;
+}
+input,
+select {
+    cursor: pointer;
+}
+* {
+    font-family: "Noto Sans JP", sans-serif;
+}
+
+header {
+    background-color: #eee;
+    height: 100px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 20px;
+    position: fixed;
+    width: 100%;
+
+    .search {
+        background-color: #fff;
+        width: 50px;
+        height: 50px;
+        border-radius: 50px 50px 50px 50px;
+        box-shadow: 0 0 10px rgba(0, 0, 0, 0.15);
+        overflow: hidden;
+        position: relative;
+        transition: 0.5s;
+        &.active {
+            width: 400px;
+        }
+
+        .clear {
+            position: absolute;
+            right: 20px;
+            top: 12px;
+            cursor: pointer;
+            i {
+            }
+        }
+        .icon {
+            width: 50px;
+            height: 50px;
+            border-radius: 50%;
+            text-align: center;
+            line-height: 54px;
+            font-size: 26px;
+            cursor: pointer;
+            background-color: #fff;
+            position: absolute;
+            top: 0;
+            left: 0;
+            i {
+            }
+        }
+        .input-frame {
+            // position: absolute;
+            top: 12px;
+            left: 60px;
+            width: 300px;
+            input[type="text"] {
+                width: 100%;
+                outline: none;
+                border: none;
+                font-size: 18px;
+            }
+            input[type="text"]::-webkit-input-placeholder {
+                -webkit-transition: 0.5s;
+                transition: 0.5s;
+            }
+            input[type="text"]::-moz-placeholder {
+                -moz-transition: 0.5s;
+                transition: 0.5s;
+            }
+            input[type="text"]:-ms-input-placeholder {
+                -ms-transition: 0.5s;
+                transition: 0.5s;
+            }
+            input[type="text"]::-ms-input-placeholder {
+                -ms-transition: 0.5s;
+                transition: 0.5s;
+            }
+            input[type="text"]::placeholder {
+                transition: 0.5s;
+            }
+            input[type="text"]:focus::-webkit-input-placeholder {
+                opacity: 0;
+            }
+            input[type="text"]:focus::-moz-placeholder {
+                opacity: 0;
+            }
+            input[type="text"]:focus:-ms-input-placeholder {
+                opacity: 0;
+            }
+            input[type="text"]:focus::-ms-input-placeholder {
+                opacity: 0;
+            }
+            input[type="text"]:focus::placeholder {
+                opacity: 0;
+            }
+        }
+    }
+    .search.active {
+        width: 400px;
+    }
+}
+
+section {
+    height: 900px;
+    text-align: center;
+    border: 1px solid #000;
+    display: flex;
+    flex-direction: column;
+    //
+    justify-content: center;
+    h1 {
+        font-size: 3em;
+    }
+}
