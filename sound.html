@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="ko">
+    <head>
+        <meta charset="UTF-8" />
+        <title>JavaScript & jQeury - Javascript audio controller</title>
+        <link rel="stylesheet" href="/assets/css/sound.css" />
+    </head>
+    <body>
+        <h1>Javascript audio controller</h1>
+        <div class="buttons">
+            <button id="btn-play-pause" onclick="playPause();">
+                Play <i class="fa fa-play"></i>
+            </button>
+            <button onclick="stop();">Stop <i class="fa fa-stop"></i></button>
+        </div>
+
+        <audio id="audio" src="/music/mountain-sky-bgm.mp3"></audio>
+
+        <div class="audio-status">
+            <span style="height: 30%"></span>
+            <span style="height: 100%"></span>
+            <span style="height: 70%"></span>
+            <span style="height: 40%"></span>
+        </div>
+
+        <script>
+            let audio = document.getElementById("audio");
+            let btnPlayPause = document.getElementById("btn-play-pause");
+            let audioStatus = document.querySelector(".audio-status");
+            let checkStatus = 0;
+
+            function playPause() {
+                if (checkStatus == 0) {
+                    checkStatus = 1;
+                    audio.play();
+                    btnPlayPause.innerHTML =
+                        'Pause <i class="fa fa-pause"></i>';
+                    audioStatus.classList.add("active");
+                } else {
+                    checkStatus = 0;
+                    audio.pause();
+                    btnPlayPause.innerHTML = 'Play <i class="fa fa-play"></i>';
+                    audioStatus.classList.remove("active");
+                }
+            }
+
+            function stop() {
+                playPause();
+                audio.pause();
+                audio.currentTime = 0;
+                btnPlayPause.innerHTML = 'Play <i class="fa fa-play"></i>';
+                audioStatus.classList.remove("active");
+            }
+        </script>
+    </body>
+</html>
