@@ -1,0 +1,358 @@
+/* Google Web Fonts CDN */
+// @import url("https://fonts.googleapis.com/css?family=Noto+Sans+KR:300,400,500,700,900&display=swap");
+// font-family: 'Noto Sans KR', sans-serif;
+
+// /* Google Web Font */
+// @import url("https://fonts.googleapis.com/css?family=Raleway&display=swap");
+// // font-family: 'Raleway', sans-serif;
+
+/* Google Web Font */
+// @import url("https://fonts.googleapis.com/css?family=Montserrat:300,400,500&display=swap");
+// font-family: 'Montserrat', sans-serif;
+
+/* Google Web Font */
+// @import url("https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;600;700&display=swap");
+// font-family: 'Playfair Display', serif;
+
+// /* Google Web Font */
+// @import url("https://fonts.googleapis.com/css2?family=Roboto:wght@100;300;400;500;700;900&display=swap");
+// // font-family: 'Roboto', sans-serif;
+
+// /* Google Web Font */
+// @import url("https://fonts.googleapis.com/css2?family=Source+Sans+Pro:wght@300;400;600;700;900&display=swap");
+// // font-family: 'Source Sans Pro', sans-serif;
+
+/* Noonnu Korean Fonts */
+// @font-face {
+//     font-family: "GmarketSansLight";
+//     src: url("https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_2001@1.1/GmarketSansLight.woff")
+//         format("woff");
+//     font-weight: normal;
+//     font-style: normal;
+// }
+// Noto Sans Japanese
+@import url("https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@500&display=swap");
+
+/* Fontawesome 4.7 */
+// @import url("https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css");
+// font-family: 'Noto Sans JP', sans-serif;
+
+/* XEION CDN */
+@import url("http://cdn.jsdelivr.net/npm/xeicon@2.3.3/xeicon.min.css");
+
+// mobile layout
+@mixin r() {
+    @media screen and(max-width: 768px) {
+        @content;
+    }
+}
+// mobile layout
+@mixin t() {
+    @media screen and(min-width: 768px) and (max-width: 1023px) {
+        @content;
+    }
+}
+@font-face {
+    font-family: "Netflix Sans";
+    src: url("/font/NetflixSans-Regular.otf") format("opentype");
+    /* 이런식으로 weight를 지정해서 사용할 수도 있다!*/
+    font-weight: normal;
+}
+@font-face {
+    font-family: "Netflix Sans";
+    src: url("/font/NetflixSans-Bold.otf") format("opentype");
+    /* 이런식으로 weight를 지정해서 사용할 수도 있다!*/
+    font-weight: bold;
+}
+body {
+    margin: 0;
+    font-size: 15px;
+    color: #333;
+    line-height: 1.5em;
+}
+// Reset CSS
+a {
+    text-decoration: none;
+    color: #333;
+}
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    // font-weight: 500;
+    margin-top: 0;
+}
+ul li {
+}
+input,
+button {
+    outline: none;
+}
+input,
+select {
+    cursor: pointer;
+}
+// html
+* {
+    box-sizing: border-box;
+    outline: none;
+    // font-family: "Noto Sans JP", sans-serif;
+    font-family: "Netflix Sans";
+
+    // border: 1px solid red;
+}
+body {
+    font-size: 26px;
+    line-height: 1.6em;
+    background-color: #000;
+    color: #222;
+    margin: 0;
+    color: gainsboro;
+}
+a {
+    text-decoration: none;
+}
+/* Common CSS */
+section {
+    position: relative;
+}
+section:not(.faq) {
+    border-bottom: 8px solid #222;
+}
+.container {
+    width: 100%;
+}
+/* Header */
+header {
+    display: flex;
+    position: absolute;
+    justify-content: space-between;
+    overflow: hidden;
+    margin-top: 20px;
+    padding: 0px 45px;
+    width: 100%;
+    z-index: 10;
+
+    .logo {
+        img {
+            width: 170px;
+        }
+    }
+    .signin {
+        button {
+            background-color: #e50914;
+            border: none;
+            color: #fff;
+            padding: 7px 17px;
+            border-radius: 3px;
+            text-transform: capitalize;
+            cursor: pointer;
+            font-size: 1rem;
+        }
+    }
+}
+
+/* Section welcome */
+.welcome {
+    height: 50vh;
+    background: url(/images/nexflix/bg.jpeg) no-repeat center center;
+    background-size: cover;
+    position: relative;
+    &::before {
+        content: "";
+        position: absolute;
+        background: rgba(0, 0, 0, 0.4);
+        width: 100%;
+        height: 100%;
+        top: 0;
+        left: 0;
+    }
+    .heading {
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        text-align: center;
+        width: 800px;
+        @include r {
+            width: 640px;
+        }
+        h1 {
+            line-height: 1.2em;
+            font-size: 3.125rem;
+            margin: 0;
+        }
+        h2 {
+            line-height: 1.3;
+            font-size: 1.625rem;
+            margin: 1rem auto;
+            font-weight: 400;
+        }
+        h3 {
+            font-size: 1.25rem;
+            padding: 0 10%;
+            font-weight: 400;
+        }
+        .getstarted {
+            position: relative;
+            display: inline-block;
+            // border: 5px solid blue;
+            input[type="email"],
+            button {
+                height: 60px;
+                outline: none;
+                border: none;
+                vertical-align: middle;
+            }
+            input[type="email"] {
+                width: 450px;
+                margin-right: -6px;
+                font-size: 18px;
+                padding-left: 10px;
+            }
+            input[type="email"] + span {
+                position: absolute;
+                left: 10px;
+                top: 10px;
+                color: #999;
+                font-size: 16px;
+                transition: font 0.1s ease, top 0.1s ease, transform 0.1s ease;
+            }
+            input[type="email"]:focus + span {
+                font-weight: bold;
+                transform: translateY(-15px);
+                font-size: 12px;
+            }
+            button {
+                width: 220px;
+                color: #fff;
+                background-color: #e50914;
+                font-size: 22px;
+                font-weight: normal;
+                cursor: pointer;
+            }
+        }
+    }
+}
+/* Section enjoy */
+.enjoy,
+.download,
+.watch,
+.create {
+    height: 500px;
+}
+.create {
+    margin-bottom: 430px;
+}
+.inner {
+    width: 1150px;
+    margin: auto;
+    overflow: hidden;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    padding: 70px 45px;
+    .desc,
+    .preview {
+        width: 50%;
+        float: left;
+    }
+    .preview {
+        text-align: center;
+        img {
+            height: 350px;
+        }
+    }
+    .desc {
+        padding-top: 40px;
+        h1 {
+            font-size: 2.825rem;
+            line-height: 1.1;
+            margin-bottom: 0.5rem;
+            // margin: 0 0 0 0.4em;
+        }
+        h2 {
+            font-size: 1.625rem;
+            font-weight: 400;
+            margin: 0.75em 0 0.25em;
+        }
+    }
+}
+/* Section download */
+/* Section watch */
+/* Section create */
+
+/* Section faq */
+.faq {
+    .inner {
+        width: 60%;
+        margin: 2em auto;
+        h1 {
+            text-align: center;
+            font-weight: 700;
+            font-size: 2em;
+            margin: 50px auto;
+        }
+        .accordion {
+            .faq-title {
+                background-color: #303030;
+                padding: 20px;
+                cursor: pointer;
+                margin-bottom: 3px;
+                position: relative;
+                display: flex;
+                &::before {
+                    content: "\e9c5";
+                    font-family: xeicon;
+                    width: 20px;
+                    height: 20px;
+                    position: absolute;
+                    right: 15px;
+                    transition: 0.5s;
+                }
+                &.active::before {
+                    transform: rotate(45deg);
+                }
+                // em {
+                //     // border: 1px solid #fff;
+                //     width: 20px;
+                //     height: 20px;
+                //     position: absolute;
+                //     right: 15px;
+                //     display: inline-block;
+                //     font-style: normal;
+                //     &::before {
+                //         content: "\e9c5";
+                //         font-family: xeicon;
+                //     }
+                // }
+                // &.active em {
+                //     transform: rotate(45deg);
+                // }
+                // i {
+                //     // float: right;
+                //     position: absolute;
+                //     right: 15px;
+                //     top: 20px;
+                //     font-size: 25px;
+                // }
+                // &.active i {
+                //     transform: rotate(45deg);
+                // }
+            }
+            .faq-title:hover,
+            .faq-title.active {
+                background-color: #34495e;
+            }
+            .faq-content {
+                background-color: #303030;
+                padding: 30px;
+                margin-bottom: 5px;
+                display: none;
+            }
+        }
+    }
+}
