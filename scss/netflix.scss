@@ -274,7 +274,6 @@ header {
 .download .inner,
 .create .inner {
     @include r {
-        border: 10px solid red;
         display: flex;
         flex-direction: column;
     }
