@@ -24,7 +24,7 @@
                     <img src="/images/nexflix/logo.svg" alt="" />
                 </div>
                 <div class="signin">
-                    <button>ログイン</button>
+                    <button class="btn-open">ログイン</button>
                 </div>
             </header>
             <section class="welcome">
@@ -38,7 +38,10 @@
                         メールアドレスを入力してメンバーシップを開始、または再開してください。
                     </h3>
                     <div class="getstarted">
-                        <input type="email" /><span>メールアドレス</span>
+                        <input name="email1" id="email1" type="email1" /><label
+                            for="email1"
+                            >メールアドレス</label
+                        >
                         <button>
                             今すぐ始める<i class="xi-angle-right-min"></i>
                         </button>
@@ -99,34 +102,37 @@
                 </div>
             </section>
             <section class="faq">
-                <div class="inner">
+                <div class="faq-inner">
                     <h1>よくある質問</h1>
                     <article class="accordion">
-                        <div class="faq-title">
-                            ネットフリックスとは何ですか？
-                            <!-- <i class="xi-plus-thin"></i>
-                            <em></em> -->
-                        </div>
+                        <input type="radio" id="faq1" name="faq-title" />
+                        <label for="faq1"
+                            >ネットフリックスとは何ですか？
+                            <span><i class="xi-plus-thin"></i></span
+                        ></label>
+                        <!-- <em></em> -->
                         <div class="faq-content">
                             Netflixは、受賞歴のあるテレビ番組、映画、アニメ、ドキュメンタリーなどを数多くのインターネット接続機器で提供するストリーミングサービスだ。
                             コマーシャルなしでいつでも好きなだけ見ることができます。すべて月1回の低価格で提供されます。
                             いつも新しい発見があり、毎週新しいテレビ番組や映画が追加されています。
                         </div>
-                        <div class="faq-title">
-                            Netflixの料金はいくらですか?
-                            <!-- <i class="xi-plus-thin"></i>
-                            <em></em> -->
-                        </div>
+                        <input type="radio" id="faq2" name="faq-title" />
+                        <label for="faq2"
+                            >Netflixの料金はいくらですか?
+                            <span><i class="xi-plus-thin"></i></span
+                        ></label>
+                        <!-- <em></em> -->
                         <div class="faq-content">
                             スマートフォン、タブレット、スマートTV、ノートパソコン、またはストリーミングデバイスでNetflixを視聴するには、月額1回の固定料金が必要です。
                             プランは月額990円から1980円。
                             追加費用も契約もありません。
                         </div>
-                        <div class="faq-title">
-                            どこで見るんですか？
-                            <!-- <i class="xi-plus-thin"></i>
-                            <em></em> -->
-                        </div>
+                        <input type="radio" id="faq3" name="faq-title" />
+                        <label for="faq3"
+                            >どこで見るんですか？
+                            <span><i class="xi-plus-thin"></i></span
+                        ></label>
+                        <!-- <em></em> -->
                         <div class="faq-content">
                             いつでもどこでも視聴可能。
                             ネットフリックスのアカウントにサインインすると、netflix.comのWebサイトからすぐに見ることができます。また、スマートテレビ、スマートフォン、タブレット、ストリーミングメディアプレーヤー、ゲーム機など、ネットフリックスのアプリを提供するインターネット接続デバイスでもすぐに見ることができます。
@@ -134,53 +140,135 @@
                             外出先でもインターネットに接続せずにダウンロードして視聴できます。
                             Netflixをどこにでも持ち運ぶことができます。
                         </div>
-                        <div class="faq-title">
-                            キャンセルはどうすればいいですか？
-                            <!-- <i class="xi-plus-thin"></i>
-                            <em></em> -->
-                        </div>
+                        <input type="radio" id="faq4" name="faq-title" />
+                        <label for="faq4"
+                            >キャンセルはどうすればいいですか？
+                            <span><i class="xi-plus-thin"></i></span
+                        ></label>
+                        <!-- <em></em> -->
                         <div class="faq-content">
                             Netflixは柔軟です。 厄介な契約も約束もない。
                             2回のクリックで簡単にオンラインでアカウントをキャンセルできます。
                             キャンセル料はかかりません。いつでもアカウントを開始または停止できます。
                         </div>
-                        <div class="faq-title">
-                            ネットフリックスで何を見ることができますか？
-                            <!-- <i class="xi-plus-thin"></i>
-                            <em></em> -->
-                        </div>
+                        <input type="radio" id="faq5" name="faq-title" />
+                        <label for="faq5"
+                            >何を見ることができますか？
+                            <span><i class="xi-plus-thin"></i></span
+                        ></label>
+                        <!-- <em></em> -->
                         <div class="faq-content">
                             Netflixには、長編映画、ドキュメンタリー、テレビ番組、アニメ、受賞歴のあるNetflixオリジナルなどが豊富にそろっている。
                             いつでも好きなだけ見てください。
                         </div>
-                        <div class="faq-title">
-                            Netflixは子供に良いですか?
-                            <!-- <i class="xi-plus-thin"></i>
-                            <em></em> -->
-                        </div>
+                        <input type="radio" id="faq6" name="faq-title" />
+                        <label for="faq6"
+                            >Netflixは子供に良いですか?
+                            <span><i class="xi-plus-thin"></i></span
+                        ></label>
+                        <!-- <em></em> -->
                         <div class="faq-content">
                             NetflixKidsの体験はメンバーシップに含まれており、子供たちが自分の空間で家族親和的なテレビショーと映画を楽しむ間、両親がコントロールできるようにしてくれる。
                             子供のプロファイルには、PINで保護された保護者による制限機能が付属しています。これにより、子供が視聴できるコンテンツの成熟度評価を制限したり、子供に見せたくない特定のタイトルをブロックしたりできます。
                         </div>
-                        見る準備はいいですか？
-                        メンバーシップを作成または再起動するには、Eメールを入力します。
-                        Eメールアドレス
                     </article>
+                    <aside>
+                        <p>
+                            まもなくご視聴いただけます!
+                            メールアドレスを入力してメンバーシップを開始、または再開してください。
+                        </p>
+                        <div class="getstarted">
+                            <input name="email" id="email" type="email" /><label
+                                for="email"
+                                >メールアドレス</label
+                            >
+                            <button>
+                                今すぐ始める<i class="xi-angle-right-min"></i>
+                            </button>
+                        </div>
+                    </aside>
                 </div>
             </section>
-            <footer></footer>
+            <footer>
+                <div class="footer-inner">
+                    <div class="sitemap">
+                        <h6>
+                            ご質問ですか? お問い合せはこちらまで: 0120-996-012
+                        </h6>
+                        <div class="links">
+                            <div class="items">
+                                <a href="#none">よくあるご質問</a>
+                                <a href="#none">IR: 投資家情報 (英語)</a>
+                                <a href="#none">Netflix視聴デバイス</a>
+                                <a href="#none">Netflix企業情報</a>
+                                <a href="#none">法的事項</a>
+                            </div>
+                            <div class="items">
+                                <a href="#none">ヘルプセンター</a>
+                                <a href="#none">採用情報 (英語)<a>
+                                <a href="#none">利用規約</a>
+                                <a href="#none">お問い合せ</a>
+                                <a href="#none">Netflix独占配信</a>
+                            </div>
+                            <div class="items">
+                                <a href="#none">アカウント</a>
+                                <a href="#none">プリペイド・ギフトカードを利用する</a>
+                                <a href="#none">プライバシー</a>
+                                <a href="#none">特定商取引法に基づく表示</a>
+                            </div>
+                            <div class="items">
+                                <a href="#none">メディアセンター</a>
+                                <a href="#none">プリペイド・ギフトカードの購入</a>
+                                <a href="#none">Cookieの設定</a>
+                                <a href="#none">スピードテスト</a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="copyright">
+                        <p>
+                            Netflix Japan<br /><br />
+                            Netflix Services Japan Ltd. E-Commerce Registration
+                            Number: Je 2018-Seoul Jong-ro-0426 Ho. Phone:
+                            00-308-321-0161<br />
+                            Representative: Reginald Shawn Thompson<br />
+                            Email: Japan@netflix.com<br />
+                            <br />
+                            Business registration number: 165-87-00119<br />
+                            Hosted by: Amazon Web Services Inc.<br />
+                        </p>
+                    </div>
+                </div>
+            </footer>
+        </div>
+        <div class="modal-login">
+            <div class="login">
+                <i class="btn-close xi-close-thin"></i>
+                <h1>ログイン</h1>
+                <input type="text" placeholder="メールアドレスまたは携帯電話番号">
+                <input type="password" placeholder="パスワード">
+                <input type="button" value="ログイン">
+                <div class="save-info">
+                  <label>
+                    <input type="checkbox">ログインしたままにする
+                  </label>
+                  <a href="#none">サポートが必要ですか?
+                </a>
+                </div>
+                <span>初めてご利用ですか?<a href="#none">新規登録はこちら</a></span>
+                <p>
+                    ユーザーがロボットではないことを確認するため、このページはGoogle reCAPTCHAを使用しています。 <a href="#none">詳細を見る</a>
+                </p>
+              </div>
         </div>
         <script>
-            $(".faq-content").eq(0).show();
-            $(".faq-title").eq(0).addClass("active");
-            $(".faq-title").click(function () {
-                $(this).addClass("active");
-                $(this).siblings(".faq-title").removeClass("active");
-                // $(this).next().show();
-                // $(this).siblings(".faq-title").next().hide();
-                $(this).next().slideDown();
-                $(this).siblings(".faq-title").next().slideUp();
-            });
+            $('.btn-open').click(function(){
+                $('.modal-login').fadeIn();
+                $('body').addClass('active');
+            })
+            $('.btn-close').click(function(){
+                $('.modal-login').fadeOut();
+                $('body').removeClass('active');
+            })
         </script>
     </body>
 </html>
