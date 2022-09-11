@@ -1,0 +1,629 @@
+/* Google Web Fonts CDN */
+// @import url("https://fonts.googleapis.com/css?family=Noto+Sans+KR:300,400,500,700,900&display=swap");
+// font-family: 'Noto Sans KR', sans-serif;
+
+// /* Google Web Font */
+// @import url("https://fonts.googleapis.com/css?family=Raleway&display=swap");
+// // font-family: 'Raleway', sans-serif;
+
+/* Google Web Font */
+// @import url("https://fonts.googleapis.com/css?family=Montserrat:300,400,500&display=swap");
+// font-family: 'Montserrat', sans-serif;
+
+/* Google Web Font */
+// @import url("https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;600;700&display=swap");
+// font-family: 'Playfair Display', serif;
+
+// /* Google Web Font */
+// @import url("https://fonts.googleapis.com/css2?family=Roboto:wght@100;300;400;500;700;900&display=swap");
+// // font-family: 'Roboto', sans-serif;
+
+// /* Google Web Font */
+// @import url("https://fonts.googleapis.com/css2?family=Source+Sans+Pro:wght@300;400;600;700;900&display=swap");
+// // font-family: 'Source Sans Pro', sans-serif;
+
+/* Noonnu Korean Fonts */
+// @font-face {
+//     font-family: "GmarketSansLight";
+//     src: url("https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_2001@1.1/GmarketSansLight.woff")
+//         format("woff");
+//     font-weight: normal;
+//     font-style: normal;
+// }
+// Noto Sans Japanese
+@import url("https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@500&display=swap");
+
+/* Fontawesome 4.7 */
+// @import url("https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css");
+// font-family: 'Noto Sans JP', sans-serif;
+
+/* XEION CDN */
+@import url("http://cdn.jsdelivr.net/npm/xeicon@2.3.3/xeicon.min.css");
+
+// mobile layout
+@mixin r() {
+    @media screen and(max-width: 768px) {
+        @content;
+    }
+}
+// mobile layout
+@mixin t() {
+    @media screen and(min-width: 768px) and (max-width: 1023px) {
+        @content;
+    }
+}
+@font-face {
+    font-family: "Netflix Sans";
+    src: url("/font/NetflixSans-Regular.otf") format("opentype");
+    /* 이런식으로 weight를 지정해서 사용할 수도 있다!*/
+    font-weight: normal;
+}
+@font-face {
+    font-family: "Netflix Sans";
+    src: url("/font/NetflixSans-Bold.otf") format("opentype");
+    /* 이런식으로 weight를 지정해서 사용할 수도 있다!*/
+    font-weight: bold;
+}
+body {
+    margin: 0;
+    font-size: 15px;
+    color: #333;
+    line-height: 1.5em;
+}
+// Reset CSS
+a {
+    text-decoration: none;
+    color: #333;
+}
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    // font-weight: 500;
+    margin-top: 0;
+}
+ul li {
+}
+input,
+button {
+    outline: none;
+}
+input,
+select {
+    cursor: pointer;
+}
+// html
+* {
+    box-sizing: border-box;
+    outline: none;
+    // font-family: "Noto Sans JP", sans-serif;
+    font-family: "Netflix Sans";
+
+    // border: 1px solid red;
+}
+body {
+    font-size: 26px;
+    line-height: 1.6em;
+    background-color: #000;
+    color: #222;
+    margin: 0;
+    color: gainsboro;
+    @include r {
+        font-size: 16px;
+    }
+}
+
+body.active {
+    overflow: hidden;
+}
+a {
+    text-decoration: none;
+}
+/* Common CSS */
+section {
+    position: relative;
+}
+section:not(.faq) {
+    border-bottom: 8px solid #222;
+    @include r {
+        padding: 20px;
+    }
+}
+.container {
+    width: 100%;
+}
+/* Header */
+header {
+    display: flex;
+    position: absolute;
+    justify-content: space-between;
+    overflow: hidden;
+    margin-top: 20px;
+    padding: 0px 45px;
+    width: 100%;
+    z-index: 10;
+    @include r {
+        padding: 35px 20px;
+    }
+
+    .logo {
+        img {
+            width: 170px;
+            @include r {
+                width: 140px;
+            }
+        }
+    }
+    .signin {
+        button {
+            background-color: #e50914;
+            border: none;
+            color: #fff;
+            padding: 7px 17px;
+            border-radius: 3px;
+            text-transform: capitalize;
+            cursor: pointer;
+            font-size: 1rem;
+        }
+    }
+}
+
+/* Section welcome */
+.welcome {
+    height: 76vh;
+    background: url(/images/nexflix/bg.jpeg) no-repeat center center;
+    background-size: cover;
+    position: relative;
+    @include r {
+        height: 50vh;
+    }
+
+    &::before {
+        content: "";
+        position: absolute;
+        background: rgba(0, 0, 0, 0.4);
+        width: 100%;
+        height: 100%;
+        top: 0;
+        left: 0;
+    }
+    .heading {
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        text-align: center;
+        width: 800px;
+        @include r {
+            width: 100%;
+        }
+        h1 {
+            line-height: 1.2em;
+            font-size: 3.125rem;
+            margin: 0;
+            @include r {
+                font-size: 34px;
+            }
+        }
+        h2 {
+            line-height: 1.3;
+            font-size: 1.625rem;
+            margin: 1rem auto;
+            font-weight: 400;
+            @include r {
+                font-size: 13px;
+                line-height: 1.2;
+            }
+        }
+        h3 {
+            font-size: 1.25rem;
+            padding: 0 10%;
+            font-weight: 400;
+        }
+        .getstarted {
+            position: relative;
+            display: inline-block;
+            @include r {
+                width: 90%;
+            }
+            // border: 5px solid blue;
+            input[type="email1"],
+            button {
+                height: 60px;
+                outline: none;
+                border: none;
+                vertical-align: middle;
+            }
+            input[type="email1"] {
+                width: 450px;
+                margin-right: -6px;
+                font-size: 18px;
+                padding-left: 10px;
+                @include r {
+                    width: 100%;
+                    margin-bottom: 15px;
+                }
+            }
+            input[type="email1"] + label {
+                position: absolute;
+                left: 10px;
+                top: 10px;
+                color: #999;
+                font-size: 16px;
+                transition: font 0.1s ease, top 0.1s ease, transform 0.1s ease;
+            }
+            input[type="email1"]:focus + label {
+                font-weight: bold;
+                transform: translateY(-15px);
+                font-size: 12px;
+            }
+            button {
+                width: 220px;
+                color: #fff;
+                background-color: #e50914;
+                font-size: 22px;
+                font-weight: normal;
+                cursor: pointer;
+            }
+        }
+    }
+}
+/* Section enjoy */
+.download .inner,
+.create .inner {
+    @include r {
+        display: flex;
+        flex-direction: column;
+    }
+}
+.download .inner .desc,
+.create .inner .desc {
+    order: 1;
+}
+.download .inner .preview,
+.create .inner .preview {
+    order: 2;
+}
+
+.enjoy,
+.download,
+.watch,
+.create {
+    height: 500px;
+    @include r {
+        height: auto;
+    }
+}
+.create {
+    margin-bottom: 430px;
+    @include r {
+        margin-bottom: 0px;
+    }
+}
+.inner {
+    width: 1150px;
+    margin: auto;
+    overflow: hidden;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    padding: 70px 45px;
+    @include r {
+        width: 100%;
+        position: static;
+        transform: translate(0);
+    }
+
+    .desc,
+    .preview {
+        width: 50%;
+        float: left;
+        @include r {
+            width: 100%;
+            float: none;
+            text-align: center;
+        }
+    }
+    .preview {
+        text-align: center;
+        img {
+            height: 350px;
+            @include r {
+                width: 100%;
+                height: auto;
+            }
+        }
+    }
+    .desc {
+        padding-top: 40px;
+        h1 {
+            font-size: 2.825rem;
+            line-height: 1.1;
+            margin-bottom: 0.5rem;
+            // margin: 0 0 0 0.4em;
+            @include r {
+                font-size: 2.5rem;
+            }
+        }
+        h2 {
+            font-size: 1.625rem;
+            font-weight: 400;
+            margin: 0.75em 0 0.25em;
+            @include r {
+                font-size: 20px;
+                line-height: 1.23em;
+            }
+        }
+    }
+}
+/* Section download */
+/* Section watch */
+/* Section create */
+
+/* Section faq */
+.faq {
+    // padding: 80px 0;
+    @include r {
+        padding: 80px 20px;
+    }
+    .faq-inner {
+        width: 60%;
+        margin: 2em auto;
+        @include r {
+            width: 100%;
+        }
+        h1 {
+            text-align: center;
+            font-weight: 700;
+            font-size: 2em;
+            margin: 50px auto;
+            @include r {
+                font-size: 30px;
+                line-height: 1.32em;
+            }
+        }
+        .accordion {
+            input[name="faq-title"] {
+                display: none;
+                // transition: 0.5s;
+            }
+            input[name="faq-title"] + label span {
+                float: right;
+                font-size: 30px;
+                // display: block;
+                transform: 0.5s;
+            }
+            // faq-content checked Function
+            input[name="faq-title"]:checked + label + .faq-content {
+                max-height: 400px;
+                padding: 30px;
+                // display: block;
+            }
+            // faq-content checked Function
+            input[name="faq-title"]:checked + label span {
+                // display: block;
+                transform: rotate(45deg);
+            }
+            label {
+                display: block;
+                background-color: #303030;
+                padding: 20px;
+                cursor: pointer;
+                margin-bottom: 3px;
+                // position: relative;
+                // &::before {
+                //     content: "\e9c5";
+                //     font-family: xeicon;
+                //     width: 20px;
+                //     height: 20px;
+                //     position: absolute;
+                //     right: 15px;
+                //     transition: 0.5s;
+                // }
+                // &.active::before {
+                //     transform: rotate(45deg);
+                // }
+            }
+            .faq-title:hover,
+            .faq-title.active {
+                background-color: #34495e;
+            }
+            .faq-content {
+                background-color: #303030;
+                margin-bottom: 12px;
+                max-height: 0;
+                overflow: hidden;
+                padding: 0;
+                transition: max-height 0.5s;
+                // display: none;
+            }
+        }
+        aside {
+            text-align: center;
+            p {
+                font-size: 24px;
+                padding: 0px 40px;
+            }
+            .getstarted {
+                position: relative;
+                display: inline-block;
+            }
+            .getstarted input[type="email"],
+            .getstarted button {
+                height: 60px;
+                outline: none;
+                border: none;
+                vertical-align: middle;
+            }
+            .getstarted input[type="email"] {
+                width: 450px;
+                margin-right: -6px;
+                font-size: 18px;
+                padding-left: 10px;
+                @include r {
+                    width: 100%;
+                    margin-bottom: 15px;
+                }
+            }
+            .getstarted input[type="email"] + label {
+                color: #999;
+                font-size: 16px;
+                position: absolute;
+                left: 10px;
+                top: 10px;
+                transition: 0.35s;
+                pointer-events: none;
+            }
+            .getstarted input[type="email"]:focus + label {
+                font-weight: bold;
+                transform: translateY(-18px);
+            }
+            .getstarted button {
+                width: 220px;
+                background-color: crimson;
+                color: #fff;
+                font-size: 26px;
+                cursor: pointer;
+            }
+        }
+    }
+}
+
+/* Footer */
+footer {
+    padding: 50px 0;
+    font-size: 12px;
+    color: #777;
+    line-height: 1.5em;
+    @include r {
+        padding: 50px 20px;
+        text-align: center;
+    }
+}
+.footer-inner {
+    width: 850px;
+    margin: auto;
+    @include r {
+        width: 100%;
+    }
+}
+.sitemap {
+    border-bottom: 1px solid #222;
+    padding-bottom: 20px;
+}
+.sitemap h6 {
+    font-size: 16px;
+    margin: 0;
+    margin-bottom: 20px;
+    font-weight: normal;
+}
+.items {
+    display: inline-block;
+    width: 24%;
+    vertical-align: top;
+    line-height: 2em;
+    @include r {
+        width: 48%;
+        margin-bottom: 20px;
+    }
+}
+.items a {
+    color: #777;
+    display: block;
+}
+.items a:hover {
+    text-decoration: underline;
+}
+
+// login modal
+
+.modal-login {
+    background-color: rgba(0, 0, 0, 0.7);
+    position: fixed;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    z-index: 100;
+    display: none;
+    .login {
+        // border: 1px solid #fff;
+        width: 450px;
+        height: 500px;
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        background-color: rgba(0, 0, 0, 0.8);
+        padding: 50px;
+        font-size: 15px;
+        color: #b3b3b3;
+        @include r {
+            width: 100%;
+        }
+        .btn-close {
+            font-size: 40px;
+            cursor: pointer;
+            position: absolute;
+            right: 20px;
+            top: 20px;
+        }
+        a:hover {
+            text-decoration: underline;
+        }
+        h1 {
+            // font-size: 35px;
+            color: #fff;
+        }
+        input[type="text"],
+        input[type="password"] {
+            background-color: #333;
+            padding: 20px 15px;
+            border-radius: 5px;
+            width: 100%;
+            border: none;
+            margin-bottom: 20px;
+            outline: none;
+            font-size: 18px;
+            color: #fff;
+        }
+        input[type="button"] {
+            font-size: 16px;
+            background-color: #e50914;
+            color: #fff;
+            border: none;
+            outline: none;
+            width: 100%;
+            border-radius: 5px;
+            padding: 18px;
+            cursor: pointer;
+        }
+        .save-info {
+            overflow: hidden;
+            margin-top: 10px;
+            label {
+                float: left;
+                input[type="checkbox"] {
+                }
+            }
+            a {
+                float: right;
+                color: #b3b3b3;
+            }
+        }
+        span {
+            a {
+                margin-left: 5px;
+                color: #fff;
+            }
+        }
+        p {
+            a {
+                color: #0071eb;
+            }
+        }
+    }
+}
